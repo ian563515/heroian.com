@@ -1,4 +1,5 @@
 function loginSuccess(userData) {
+    console.log("登入成功:", userData);
     localStorage.setItem("user", JSON.stringify(userData));
     window.location.href = "index.html"; // 登入成功後回到首頁
 }
