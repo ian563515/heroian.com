@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateUI() {
         if (user) {
-            loginLink.style.display = "none";
-            userInfo.style.display = "inline-block";
+            loginLink.style.display = "none";  // 隱藏「登入」按鈕
+            userInfo.style.display = "inline-block";  // 顯示用戶資訊
             userName.textContent = `歡迎, ${user.name}`;
         } else {
-            loginLink.style.display = "inline-block";
-            userInfo.style.display = "none";
+            loginLink.style.display = "inline-block";  // 顯示「登入」按鈕
+            userInfo.style.display = "none";  // 隱藏用戶資訊
         }
     }
 
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.removeItem("user");
             user = null;
             updateUI();
-            window.location.href = "index.html"; // 登出後回到首頁
+            window.location.href = "index.html"; // 登出後重新導向首頁
         });
     }
 
