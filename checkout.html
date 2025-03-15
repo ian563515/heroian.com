@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結帳</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4194f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .checkout-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .checkout-container h2 {
+            margin-bottom: 20px;
+        }
+        .checkout-container ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .checkout-container li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .checkout-container button {
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .checkout-container button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <h2>購物車內容</h2>
+        <ul class="cart-items"></ul>
+        <button>確認結帳</button>
+    </div>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItemsContainer = document.querySelector('.cart-items');
+        function updateCart() {
+            cartItemsContainer.innerHTML = '';
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} x ${item.quantity}`;
+                cartItemsContainer.appendChild(li);
+            });
+        }
+        updateCart();
+    </script>
+</body>
+</html>

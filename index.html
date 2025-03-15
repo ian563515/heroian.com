@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電商網站</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background: #0078d7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: #005a9e;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 10px 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .container h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons a {
+            text-decoration: none;
+            padding: 15px 25px;
+            background: #0078d7;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: 10px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .buttons a:hover {
+            background: #005a9e;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0078d7;
+            color: white;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>歡迎來到電商平台</header>
+    <nav>
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="products.html">商品</a></li>
+            <li><a href="checkout.html">結帳</a></li>
+            <li><a href="login.html">登入</a></li>
+            <li><a href="#about">關於我們</a></li>
+            <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>最優惠的數位商品等你來選購！</h1>
+        <p>提供各種遊戲代購、禮品卡、影視、工具等數位商品</p>
+        <div class="buttons">
+            <a href="products.html">立即購物</a>
+            <a href="login.html">會員登入</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 電商網站. 版權所有.</p>
+    </footer>
+</body>
+</html>
