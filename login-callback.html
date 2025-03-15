@@ -1,1 +1,23 @@
-
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google 登入處理</title>
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            if (params.has("code")) {
+                alert("Google 登入成功！");
+                window.location.href = "index.html";
+            } else {
+                alert("登入失敗，請重試！");
+                window.location.href = "login.html";
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>正在處理 Google 登入，請稍候...</p>
+</body>
+</html>
